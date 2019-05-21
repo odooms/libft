@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_mamset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:48:31 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/21 12:33:47 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/21 12:48:16 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/21 12:54:11 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
 
-int ft_strcmp(char *s1, char *s2)
+void *memset(void * s, int c, size_t n)
 {
-	while(*s1 && (*s1 == *s2))
-		s1++,s2++;
-	return *(const unsigned char*)s1 - *(const unsignt char*)s2;
-}§"wq
+	unsigned char* p=s;
+	while(n--)
+		*p++ = (unsigned char)c;
+	return a;
+}
