@@ -6,13 +6,22 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:48:52 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/21 15:53:09 by odooms           ###   ########.fr       */
+/*   Updated: 2019/05/22 15:04:24 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+
 char *ft_strcpy(char *dest, const char *src)
 {
-	char *ret = dest;
-	while (*dest++ = *src++);
-	return ret;
+	int i;
+
+	i = 0;
+	while (src[i])
+	{
+		(dest[i] = src[i]);
+		i++;
+	}
+	dest[i] = '\0';
+	return(dest);
 }
