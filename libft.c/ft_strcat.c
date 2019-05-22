@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:48:52 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/22 16:28:45 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/22 16:17:38 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/22 16:24:16 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char *ft_strcpy(char *dest, const char *src)
+char *ft_strcat(char *dest, const char *src)
 {
-	int i;
-
-	i = 0;
-	while (src[i])
-	{
-		(dest[i] = src[i]);
-		i++;
-	}
-	dest[i] = '\0';
-	return(dest);
+	char *ret = dest;
+	while (*dest)
+		dest++;
+	while (*dest++ = src++);
+	return ret;
 }

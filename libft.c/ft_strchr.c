@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:48:52 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/22 14:25:11 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/22 16:05:07 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/22 16:17:18 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char *ft_strcpy(char *dest, const char *src)
+char *ft_strchr(const char *s, int c);
 {
-	int i;
-
-	i = 0;
-	while (src[i])
-	{
-		(dest[i] = src[i]);
-		i++;
-	}
-	dest[i] = '\0';
-	return(dest);
+	while(*s != (char)c)
+		if (!*s++)
+			return 0;
+	return (char *)s
 }
