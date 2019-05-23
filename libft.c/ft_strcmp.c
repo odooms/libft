@@ -6,14 +6,22 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:48:31 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/21 12:33:47 by odooms           ###   ########.fr       */
+/*   Updated: 2019/05/23 11:04:29 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 
-int ft_strcmp(char *s1, char *s2)
+int ft_strcmp(const char *s1,const char *s2)
 {
-	while(*s1 && (*s1 == *s2))
-		s1++,s2++;
-	return *(const unsigned char*)s1 - *(const unsignt char*)s2;
-}§"wq
+	if ((*s1 == '\0' && *s2 != '\0') || (*s1 != '\0' && *s2 == '\0'))
+	{
+		return(1)
+	}
+	else if
+		(*s1 && *s2 && (*s1 == *s2))
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
+}

@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 16:17:38 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/23 08:39:42 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/23 10:02:12 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/23 11:04:22 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char *ft_strcat(char *dest, const char *src)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char *ret = dest;
-	while (*dest)
-		dest++;
-	while (*dest++ = src++);
-	return ret;
+	if ((*s1 == '\0' && *s2 != '\0') ||(*s1 != '\0' && *s2 == '\0'))
+	{
+		return(1)
+	}
+	else if (n == 0)
+	{
+		return (0);
+	}
+
 }
