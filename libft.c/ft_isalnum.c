@@ -6,16 +6,16 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 09:43:39 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/22 09:50:14 by odooms           ###   ########.fr       */
+/*   Updated: 2019/05/24 16:05:19 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int a)
+int	ft_isalnum(int a)
 {
 	if ((a >= 060) && (a <= 172))
 	{
 		return (1);
 	}
 	else
-		return(0);
+		return (0);
 }

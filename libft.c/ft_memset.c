@@ -6,14 +6,14 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:48:16 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/24 14:21:40 by odooms           ###   ########.fr       */
+/*   Updated: 2019/05/24 16:31:36 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char* p=s;
-	while(n--)
+	unsigned char *p = s;
+	while (n--)
 		*p++ = (unsigned char)c;
-	return a;
+	return (a);
 }
