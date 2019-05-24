@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 13:26:12 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/23 14:16:24 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/21 14:22:16 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/24 12:20:59 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#ifndef LIBFT_H_
+#define LIBFT_H_
+#include <sting.h>
 
-int ft_tolower(int a);
-{
-	if ((a >= 65) && (a <= 90))
-		a = a + 32;
-	return a;
-}
+int	ft_tolower(int a);
+int	ft_isalnum(int a);
+int	ft_isascii(int a);
+int ft_isdigit(int a);
+int ft_isalpha(int a);
+int ft_toupper(int a);
+
+#endif
