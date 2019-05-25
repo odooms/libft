@@ -6,16 +6,22 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 09:15:39 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/24 16:26:24 by odooms           ###   ########.fr       */
+/*   Updated: 2019/05/25 13:15:35 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int a)
+#include <stdio.h>
+
+int	ft_isdigit(int a);
+int main()
 {
+	int a;
+	a = 59;
 	if ((a >= 48) && (a <= 57))
 	{
-		return (1);
+		printf("true\n");
 	}
 	else
-		return (0);
+		printf("fales\n");
+	return (0);
 }

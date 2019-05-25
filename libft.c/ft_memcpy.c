@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:48:16 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/25 11:44:14 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/25 11:55:56 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/25 12:58:35 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, size_t len)
+#include <stdio.h>
+#include <string.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int i;
-	char *p;
-	p* = b;
-	i = 0;
-	while(len > 0)
+	size_t	i;
+	char str1;
+	char str2;
+
+	if	(dest && src)
 	{
-		*p = c;
-		p++;
-		len--;
+		i = 0;
+		str1 = *dest;
+		str2 = *src;
+		while(i < n)
+		{
+			str1[i] = str2[i];
+			i++;
+		}
 	}
-	return (b);
+	return (dest);
 }
