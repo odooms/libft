@@ -6,15 +6,15 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:35:43 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/24 12:21:11 by odooms           ###   ########.fr       */
+/*   Updated: 2019/05/27 14:58:21 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-
-int ft_toupper(int a);
+int	ft_toupper(int a)
 {
-	if((a <= 65) && (a <= 90))
+	if (a >= 97 && a <= 122)
+	{
 		a = a - 32;
-	return a;
+	}
+	return (a);
 }

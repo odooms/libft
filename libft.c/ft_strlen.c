@@ -6,18 +6,18 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:52:17 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/24 14:44:06 by odooms           ###   ########.fr       */
+/*   Updated: 2019/05/27 15:15:54 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t i;
 
 	i = 0;
-	while(s[i] != '\0')
-	   	i++;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
 	return (i);
 }

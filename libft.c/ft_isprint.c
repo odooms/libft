@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:48:52 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/27 15:22:05 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/27 15:34:55 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/27 15:41:19 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, const char *src)
+int	ft_isprint(int a)
 {
-	int i;
-	char *a;
-	
-	a = dest;
-	i = 0;
-	while (src[i] != '\0')
-	{
-		(dest[i] = src[i]);
-		dest++;
-		src++
-	}
-	dest[i] = '\0';
-	return (a);
+    if (a >= 32 && a <= 126)
+    {
+        return (1);
+    }
+    else
+        return (0);
 }
+

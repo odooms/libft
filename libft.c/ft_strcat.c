@@ -5,18 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 16:17:38 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/23 08:39:42 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/27 09:04:31 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/27 15:29:49 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <string.h>
-
-char *ft_strcat(char *dest, const char *src)
+#include<stdio.h>
+char	*ft_strcat(char *s1, const char *s2);
+int main()
 {
-	char *ret = dest;
-	while (*dest)
-		dest++;
-	while (*dest++ = src++);
-	return ret;
+    printf(" %s\n", ft_strcat("abc", "abe"));
+    return (0);
+}
+char	*ft_strcat(char *s1, const char *s2)
+{
+	char *a;
+
+	a = s1;
+	while (*s1 != '\0')
+	{
+		s1++;
+	}
+	while (*s2 != '\0')
+	{
+		*s1 = *s2;
+		s1++;
+		s2++;
+	}
+	*s1 = '\0';
+	return (a);
 }
