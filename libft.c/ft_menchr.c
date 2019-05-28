@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_menchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 09:04:31 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/28 15:16:56 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/28 08:10:21 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/28 09:29:57 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *s1, const char *s2)
+void *memchr(const void *s, int c, size_t n)
 {
-	char *a;
-
-	a = s1;
-	while (*s1 != '\0')
+	char	*a
+	size_t	i;
+	a = *s;
+	i = -1;
+	while(++i < n)
 	{
-		s1++;
+		if (*a + i) == c)
+		{
+			return ((void *a + i);
+					}
+					return (NULL)
 	}
-	while (*s2 != '\0')
-	{
-		*s1 = *s2;
-		s1++;
-		s2++;
-	}
-	*s1 = '\0';
-	return (a);
 }

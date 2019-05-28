@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 09:04:31 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/28 15:16:56 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/28 09:44:54 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/28 10:33:51 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *s1, const char *s2)
-{
-	char *a;
+char	*ft_strstr(const char *haystack, const char *needle)
 
-	a = s1;
-	while (*s1 != '\0')
+{
+	size_t	i;
+	size_t	n;
+	size_t	j;
+
+	i = 0;
+	n = 0;
+	j = 0;
+	while (haystack[i] == '\0' && needle[i] == '\0')
 	{
-		s1++;
+		if (haystack[i] == needle[n])
+			n++;
+		i++;
 	}
-	while (*s2 != '\0')
+	if (n == ft_strlen(needle))
 	{
-		*s1 = *s2;
-		s1++;
-		s2++;
+	   	while j < (i - n)
+		{
+			haystack++;
+			j++;
+		}
+		return (*haystack);
 	}
-	*s1 = '\0';
-	return (a);
+	else
+		return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 16:05:07 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/22 16:17:18 by odooms           ###   ########.fr       */
+/*   Updated: 2019/05/28 15:03:18 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,21 @@
 
 char *ft_strchr(const char *s, int c);
 {
-	while(*s != (char)c)
-		if (!*s++)
-			return 0;
-	return (char *)s
+	chr str[
+	k = 0;
+	i = 0;
+	j = i;
+	while ( str[i] != '\0')
+		i++
+		{
+			if str[i] == chr)
+			{
+				(str[j] != '\0')
+					j++
+					{
+						str1[k] ='\0'
+					}
+			}
+			return (0);
+		}
 }
