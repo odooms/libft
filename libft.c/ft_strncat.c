@@ -6,22 +6,27 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 08:20:55 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/28 08:41:58 by odooms           ###   ########.fr       */
+/*   Updated: 2019/05/29 09:33:59 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_strncat_
+char	ft_strncat(char *s1, const char *s2, size_t n)
 {
-	char s1;
-	char s2;
 	int i;
 	int j;
-	int n;
+
 	i = 0;
 	j = 0;
-	n = 4;
-	(s1[i] != '\0')
+	while (s1[i] != '\0')
 	{
 		i++;
 	}
+	while (j < n)
+	{
+		s1[i] = s2[j];
+		i++;
+		j++;
+	}
+	s1[i] = '\0';
+	return (0);
 }
