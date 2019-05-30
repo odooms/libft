@@ -6,18 +6,18 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 16:18:37 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/27 16:23:42 by odooms           ###   ########.fr       */
+/*   Updated: 2019/05/30 12:45:25 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void	ft_memmove(*dest, const void *src, size_t len);
 {
-	char d;
-	char s;
-	char t;
-
-	d = *dest;
-	s = *src;
-	
-
+	char i;
+	i = 0;
+	while (i < len)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return(0);
 }

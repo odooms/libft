@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 10:02:12 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/30 15:34:17 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/30 12:51:03 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/30 16:40:07 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
+	char *p1;
+	char *p2;
+	p1 = s1;
+	p2 = s2;
 
-	i = 0;
-	if ((*s1 == '\0' && *s2 != '\0') ||(*s1 != '\0' && *s2 == '\0'))
+	while (n--)
 	{
-		return (1);
-	}
-	else if (n == 0)
-	{
-		return (0);
-	}
-	else
-	{
-		while (s1[i] != '\0' && s2[i] != '\0') && (s1[i] == s2[i]) && (i < n && i != n -1)
+		if (*p1 != *p2)
 		{
-			i++;
+			return (*p1 - *p2);
 		}
+		else
+			p1++, p2++;
 	}
-	return (s1[i] - s2[i]);
+	return (0);
 }

@@ -6,8 +6,26 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 09:31:55 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/28 09:32:47 by odooms           ###   ########.fr       */
+/*   Updated: 2019/05/30 11:02:47 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	char	*b;
+	size_t 	i;
 
+	b = *s;
+	if (b)
+	{
+		i = 0;
+		while (i < n)
+		{
+			if (*b == c)
+				return(*b);
+			i++;
+			b++'
+		}
+	}
+	return (0);
+}

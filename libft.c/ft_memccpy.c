@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_menchr.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 08:10:21 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/28 09:29:57 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/30 09:39:43 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/30 10:05:59 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memchr(const void *s, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	char	*a
 	size_t	i;
-	a = *s;
-	i = -1;
-	while(++i < n)
+	if (dest && src)
 	{
-		if (*a + i) == c)
+		i = 0;
+		while (i < n)
 		{
-			return ((void *a + i);
-					}
-					return (NULL)
+			dest[i] = src[i]
+			{
+				if (src[i] == c)
+					return(*dest + 1 + i + 1 );
+				i++;
+			}
+		}
 	}
+	return (0);
 }
