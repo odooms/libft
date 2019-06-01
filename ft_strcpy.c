@@ -6,9 +6,11 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:48:52 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/29 12:20:01 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/01 10:51:49 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {

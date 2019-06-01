@@ -6,21 +6,24 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:48:16 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/27 16:12:19 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/01 13:17:30 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, size_t len)
+#include "libft.h"
+#include <string.h>
+
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int i;
-	char *p;
-	p* = b;
-	i = 0;
-	while(len > 0)
+	unsigned char *a;
+	if (len == 0)
+		return (b);
+	a = (unsigned char *)b;
+	while (len--)
 	{
-		*p = c;
-		p++;
-		len--;
+		*a = (unsigned char)c
+			if (len)
+				w++;
 	}
 	return (b);
 }

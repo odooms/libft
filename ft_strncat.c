@@ -6,11 +6,13 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 08:20:55 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/29 09:33:59 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/01 10:20:03 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_strncat(char *s1, const char *s2, size_t n)
+#include "libft.h"
+
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	int i;
 	int j;

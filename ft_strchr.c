@@ -6,29 +6,23 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 16:05:07 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/28 15:03:18 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/01 11:08:54 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char *ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
 {
-	chr str[
-	k = 0;
-	i = 0;
-	j = i;
-	while ( str[i] != '\0')
-		i++
+	char	*str;
+	str = (char *)s;
+	while (*str != c)
 		{
-			if str[i] == chr)
+			if (str == '\0')
 			{
-				(str[j] != '\0')
-					j++
-					{
-						str1[k] ='\0'
-					}
+				return (NULL);
 			}
-			return (0);
+			str++;
 		}
+	return(str);
 }

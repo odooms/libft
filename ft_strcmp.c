@@ -6,9 +6,11 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:48:31 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/30 12:50:11 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/01 10:08:26 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
