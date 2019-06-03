@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:48:16 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/01 13:17:30 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/03 15:46:29 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *a;
+	char *a;
 	if (len == 0)
 		return (b);
-	a = (unsigned char *)b;
+	a = (char *)b;
 	while (len--)
 	{
-		*a = (unsigned char)c
+		*a = (char)c
 			if (len)
-				w++;
+				a++;
 	}
 	return (b);
 }

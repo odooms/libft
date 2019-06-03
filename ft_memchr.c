@@ -6,26 +6,22 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 09:31:55 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/30 11:02:47 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/03 16:31:03 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*b;
-	size_t 	i;
-
-	b = *s;
-	if (b)
+	char *b;
+	b = (char *)s;
+	while(n--)
 	{
-		i = 0;
-		while (i < n)
-		{
-			if (*b == c)
-				return(*b);
-			i++;
-			b++'
-		}
+		if (*b == c)
+			return(b);
+		if (n)
+			b++;
 	}
 	return (0);
 }

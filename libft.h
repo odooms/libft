@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:22:16 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/01 12:33:52 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/03 16:43:27 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,13 @@ size_t	ft_strlen(const char *s);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 char	*ft_strchr(const char *s, int c);
 void	*ft_memset(void *b, int c, size_t len);
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+int	ft_memcmp(onst void *s1, const void *s2, size_t n);
 int ft_tolower(int c);
 int ft_tolower(int c);
+void	*ft_memalloc(size_t len);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+char	*ft_strnew(size_t len);
+void	ft_striter(char *s, void (*f)(char *)
 #endif

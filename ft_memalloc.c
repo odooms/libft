@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 09:39:43 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/03 16:29:52 by odooms           ###   ########.fr       */
+/*   Created: 2019/06/03 12:33:52 by odooms            #+#    #+#             */
+/*   Updated: 2019/06/03 14:22:09 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
-{
-	char *c1;
-	char *c2;
+#include "libft.h"
 
-	size_t a;
-	if (dest == src || n == 0)
-		return (dest);
-	a = 0;
-	c1 = (char *)s1;
-	c2 = (char *)s2;
-	while (a < n)
+void	*ft_memmalloc(size_t len)
+{
+	char *t;
+	size_t i;
+	if ((t = malloc(size)) == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len)
 	{
-		c1[a] = c2[a];
-		if (c1[a] == c)
-			return (c1 + a + 1);
-		a++;
+		t[i] = 0;
+		i++;
 	}
-	return (0);
+	return (t);
 }

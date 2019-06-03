@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 16:05:07 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/01 11:08:54 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/03 15:41:24 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 char	*ft_strchr(const char *s, int c);
 {
-	char	*str;
+	char *str;
+
 	str = (char *)s;
 	while (*str != c)
 		{
@@ -24,5 +25,5 @@ char	*ft_strchr(const char *s, int c);
 			}
 			str++;
 		}
-	return(str);
+	return (str);
 }
