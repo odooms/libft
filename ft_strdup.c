@@ -6,20 +6,26 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 08:23:09 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/03 15:44:51 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/04 13:38:56 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 char	*ft_strdup(const char *s1)
 {
-	char s2;
-	char i;
+	char	c;
+	int		i;
 
 	i = 0;
-	s2 = *s1;
+	c = (char *)malloc(ft_strlen(s1) + 1);
+	if (c == 0)
+		return (0);
 	while (s1[i] != '\0')
 	{
+		c[i] = s1[i];
 		i++;
 	}
-	return (0);
+	c[i] = '\0';
+	return (c);
 }

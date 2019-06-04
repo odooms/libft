@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 14:41:55 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/04 12:02:54 by event            ###   ########.fr       */
+/*   Updated: 2019/06/04 13:45:24 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnew(size_t size)
 {
-	char *str;
-	size_t i;
+	char	*str;
+	size_t	i;
 
 	str = (char *)malloc(size of (char ) * (size + 1));
 	if (str)

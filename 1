@@ -1,27 +1,104 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 09:31:55 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/03 16:30:58 by odooms           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: odooms <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/05/21 11:49:17 by odooms            #+#    #+#              #
+#    Updated: 2019/06/04 16:10:09 by odooms           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-#include <stdio.h>
+NAME = libft.a
+CC = gcc
+CFLAG = -Wall -Wextra -werror
+SRC = ft_isalnum.c\
+	  ft_isalpha.c\
+	  ft_isascii.c\
+	  ft_isdigit.c\
+	  ft_isprint.c\
+	  ft_memalloc.c\
+	  ft_memccpy.c\
+	  ft_memchr.c\
+	  ft_memcmp.c\
+	  ft_memcpy.c\
+	  ft_memmove.c\
+	  ft_memset.c\
+	  ft_putchar_fd.c\
+	  ft_putstr_fd.c\
+	  ft_strcat.c\
+	  ft_strchr.c\
+	  ft_strcmp.c\
+	  ft_strcpy.c\
+	  ft_strdup.c\
+	  ft_strequ.c\
+	  ft_striter.c\
+	  ft_striteri.c\
+	  ft_strlen.c\
+	  ft_strmap.c\
+	  ft_strmapi.c\
+	  ft_strncat.c\
+	  ft_strncmp.c\
+	  ft_strncpy.c\
+	  ft_strnequ.c\
+	  ft_strnew.c\
+	  ft_strnstr.c\
+	  ft_strstr.c\
+	  ft_tolower.c\
+	  ft_toupper.c
+ 
+HD = -I libft.h
 
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	char *b;
-	b = (char *)s;
-	while(n--)
-	{
-		if (*b == c)
-			return(b);
-		if (n)
-			b++;
-	}
-	return (0);
-}
+OBJ = ft_isalnum.o\
+	  ft_isalpha.o\
+	  ft_isascii.o\
+	  ft_isdigit.o\
+	  ft_isprint.o\
+	  ft_memalloc.o\
+	  ft_memccpy.o\
+	  ft_memchr.o\
+	  ft_memcmp.o\
+	  ft_memcpy.o\
+	  ft_memmove.o\
+	  ft_memset.o\
+	  ft_putchar_fd.o\
+	  ft_putstr_fd.o\
+	  ft_strcat.o\
+	  ft_strchr.o\
+	  ft_strcmp.o\
+	  ft_strcpy.o\
+	  ft_strdup.o\
+	  ft_strequ.o\
+	  ft_striter.o\
+	  ft_striteri.o\
+	  ft_strlen.o\
+	  ft_strmap.o\
+	  ft_strmapi.o\
+	  ft_strncat.o\
+	  ft_strncmp.o\
+	  ft_strncpy.o\
+	  ft_strnequ.o\
+	  ft_strnew.o\
+	  ft_strnstr.o\
+	  ft_strstr.o\
+	  ft_tolower.o\
+	  ft_toupper.o
+
+all: $(NAME)
+
+$(NAME): 
+	$(CC) $(CFLAGS) -c $(SRC) $(HD)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
+
+re: fclean all
+
+clean:
+	/bin/rm -f *.o
+
+fclean:
+	/bin/rm -rf $(NAME) $(OBJ)
+
+.PHONY: clean
+
