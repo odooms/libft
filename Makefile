@@ -6,7 +6,7 @@
 #    By: odooms <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 11:49:17 by odooms            #+#    #+#              #
-#    Updated: 2019/06/03 16:37:08 by odooms           ###   ########.fr        #
+#    Updated: 2019/06/04 11:36:43 by event            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,17 @@ NAME = libft.a
 CC = gcc
 CFLAG = -Wall -Wextra -werror
 SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
-	  ft_strcat.c ft_strcmp.c ft_strcpy.c ft_strlen.c ft_strncat.c \
-	  ft_strchr.c\
-	  ft_memset.c ft_memcpy.c ft_memcmp.c ft_memccpy.c ft_memchr.c ft_memmove.c \
+	  ft_strcat.c ft_strchr.c ft_strcmp.c ft_strcpy.c ft_strdup.c \
+	  ft_strlen.c ft_strncat.c ft_strncmp.c strncpy.c ft_strncmp.c \
+	  ft_strnstr.c ft_strstr.c
+	  ft_memset.c ft_memcpy.c ft_memcmp.c ft_memccpy.c ft_memchr.c \
+		  ft_memmove.c\ 
 	  ft_tolower.c ft_toupper.c \
 	  /* part2 */ \
 	  ft_memalloc.c \
 	  ft_putchar.c ft_putstr_fd.c \
-	  ft_strnew.c ft_striter.c
+	  ft_strequ.c ft_strnew.c ft_striter.c ft_stritri.c ft_strmap.c \
+	  ft_strmapi.c ft_strnequ.c stnew.c\ 
 HD = -I libft.h
 OBJ = SRC:.c.o
 $(NAME): 
