@@ -6,9 +6,11 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 09:39:43 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/03 16:29:52 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/04 16:38:01 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {

@@ -6,13 +6,13 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 09:37:53 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/01 09:48:00 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/04 16:26:22 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int a)
+int	ft_isascii(int c)
 {
 	if (a >= 0 && a <= 177)
 	{

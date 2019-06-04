@@ -6,15 +6,15 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 15:34:55 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/01 09:50:23 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/04 16:30:44 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int a)
+int	ft_isprint(int c)
 {
-    if (a >= 32 && a <= 126)
+    if (a >= 40 && a <= 176)
     {
         return (1);
     }
