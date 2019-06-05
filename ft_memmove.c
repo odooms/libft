@@ -6,9 +6,11 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 11:11:56 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/30 11:13:38 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/05 10:15:06 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

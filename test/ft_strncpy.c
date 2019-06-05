@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 08:23:09 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/05 09:10:28 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/22 14:26:44 by odooms            #+#    #+#             */
+/*   Updated: 2019/05/29 12:35:15 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strdup(const char *s1)
+#include<stdio.h>
+char	*ft_strncpy(char *dst, const char *src, size_t len);
+int main()
 {
-	char	c;
-	int		i;
+	char src[20] = "awesome strncpy", dst[10] = "this is ";
+	ft_strncpy(src, dst, 8);
+	printf("src : %s", src);
+	return (0);
+}
+
+char	*ft_strncpy(char *dst, const char *src, size_t len)
+{
+	size_t i;
 
 	i = 0;
-	c = (char *)malloc(ft_strlen(s1) + 1);
-	if (c == 0)
-		return (0);
-	while (s1[i] != '\0')
+	while((i < len) && (src[i] != '\0'))
 	{
-		c[i] = s1[i];
+		dst[i] = src[i];
 		i++;
 	}
-	c[i] = '\0';
-	return (c);
+	dst[i] = '\0';
+	while (i < len)
+	{
+		dst[i] = '\0';
+		i++;
+	}return (0);
 }

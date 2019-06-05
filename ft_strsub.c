@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:48:16 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/05 10:17:06 by odooms           ###   ########.fr       */
+/*   Created: 2019/06/05 08:23:23 by odooms            #+#    #+#             */
+/*   Updated: 2019/06/05 10:03:59 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char *a;
-	if (len == 0)
-		return (b);
-	a = (char *)b;
-	while (len--)
+	char	*ptr;
+	size_t	i;
+
+	if (s == 0)
+		return (0);
+	ptr = (char *)malloc(sizeof(char) * (len + 1));
+	if (ptr == 0)
+		return (0);
+	i = 0;
+	while (i < len)
 	{
-		*a = (char)c
-			if (len)
-				a++;
+		ptr[i] = s[start + i];
+		i++;
 	}
-	return (b);
+	ptr[i] = '\0';
+	return (ptr);
 }

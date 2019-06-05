@@ -6,9 +6,11 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 10:40:08 by odooms            #+#    #+#             */
-/*   Updated: 2019/05/28 14:13:48 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/05 09:58:58 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

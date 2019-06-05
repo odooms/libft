@@ -6,13 +6,13 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:26:12 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/01 10:28:56 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/05 10:08:07 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int a)
+int	ft_tolower(int c)
 {
 	if (a >= 65 && a <= 90)
 	{

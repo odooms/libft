@@ -6,11 +6,11 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 09:31:55 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/03 16:31:03 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/05 08:47:24 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

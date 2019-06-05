@@ -6,13 +6,13 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:35:43 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/01 10:28:44 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/05 10:07:56 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int a)
+int	ft_toupper(int c)
 {
 	if (a >= 97 && a <= 122)
 	{

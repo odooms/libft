@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:48:16 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/05 10:17:06 by odooms           ###   ########.fr       */
+/*   Created: 2019/06/05 07:48:03 by odooms            #+#    #+#             */
+/*   Updated: 2019/06/05 09:25:58 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *a;
-	if (len == 0)
-		return (b);
-	a = (char *)b;
-	while (len--)
+	char	*ptr;
+	int		i;
+
+	i = 0;
+	if (s1 == 0 || s2 == 0)
+		return (0);
+	ptr = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2 + 1)));
+	if (ptr == 0)
+		return (0);
+	while (*s1)
 	{
-		*a = (char)c
-			if (len)
-				a++;
+		ptr[i] = *s1;
+		i++;
+		s1++;
 	}
-	return (b);
+	while (*s2)
+	{
+		ptr[i] = *s2;
+		i++;
+		s2++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
