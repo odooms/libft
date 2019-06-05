@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 12:33:52 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/04 16:33:21 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/05 10:49:06 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	*ft_memmalloc(size_t len)
 {
-	char *t;
-	size_t i;
+	char	*t;
+	size_t	i;
+
 	if ((t = malloc(size)) == NULL)
 		return (NULL);
 	i = 0;

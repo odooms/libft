@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:48:16 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/05 15:48:57 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/28 08:20:55 by odooms            #+#    #+#             */
+/*   Updated: 2019/06/01 10:20:03 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	char p;
+	int i;
+	int j;
 
-	p = b;
-	while (len > 0)
+	i = 0;
+	j = 0;
+	while (s1[i] != '\0')
 	{
-		*P = c;
-		p++;
-		len --;
+		i++;
 	}
-	return (b);
+	while (j < n)
+	{
+		s1[i] = s2[j];
+		i++;
+		j++;
+	}
+	s1[i] = '\0';
+	return (0);
 }

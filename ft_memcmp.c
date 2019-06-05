@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 12:51:03 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/03 16:32:50 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/05 10:52:25 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	char *c1;
 	char *c2;
+
 	if (s1 == s2 || n == 0)
 	{
 		return (0);

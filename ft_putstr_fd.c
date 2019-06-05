@@ -6,11 +6,11 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 14:31:17 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/05 08:55:48 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/05 13:34:23 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.c"
+#include "libft.h"
 
 void	ft_putstr_fd(char const *s, int fd)
 {

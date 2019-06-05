@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:48:16 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/05 15:48:57 by odooms           ###   ########.fr       */
+/*   Created: 2019/06/03 14:27:23 by odooms            #+#    #+#             */
+/*   Updated: 2019/06/05 08:51:23 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_putchar_fd(char c, int fd)
 {
-	char p;
-
-	p = b;
-	while (len > 0)
-	{
-		*P = c;
-		p++;
-		len --;
-	}
-	return (b);
+	write(fd, &c, 1);
 }

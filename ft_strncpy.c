@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:26:44 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/05 09:46:46 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/05 11:01:49 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	size_t i;
 
 	i = 0;
-	while((i < len) && (src[i] != '\0'))
+	while ((i < len) && (src[i] != '\0'))
 	{
 		dst[i] = src[i];
 		i++;
@@ -27,5 +27,6 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	{
 		dst[i] = '\0';
 		i++;
-	}return (0);
+	}
+	return (0);
 }
