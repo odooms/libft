@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 12:51:03 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/05 10:52:25 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/06 07:50:10 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,18 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char *c1;
-	char *c2;
+	int		i;
+	char	*str1;
+	char	*str2;
 
-	if (s1 == s2 || n == 0)
-	{
-		return (0);
-	}
-	c1 = (char *)s1;
-	c2 = (char *)s2;
-	while (n--)
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	i = 0;
+	while (i < n)
 		{
-			if (*c1 != *c2)
-				return (*c1 - *c2);
-			if (n)
-			{
-				c1++;
-				c2++;
-			}
+			if (str1[i] != str2[i])
+				return (str1[i] - str2[i]);
+			i++;
 		}
 	return (0);
 }

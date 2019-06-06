@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 11:55:56 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/05 10:53:47 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/06 09:57:04 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char *c1;
-	char *c2;
+	size_t i;
+	unsigned char *d;
+	unsigned char *s;
 
-	if (n == 0 || dest == src)
-		return (s1);
-	c1 = (char *)dest;
-	c2 = (char *)src;
-	while (--n)
+	i = 0;
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	while (i < n)
 	{
-		*c1++ = *c2++;
-		*c1 = *c2
+		d[i] = s[i];
+		i++;
 	}
 	return (dest);
 }

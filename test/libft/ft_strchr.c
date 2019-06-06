@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 16:13:41 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/06 12:10:23 by odooms           ###   ########.fr       */
+/*   Created: 2019/05/22 16:05:07 by odooms            #+#    #+#             */
+/*   Updated: 2019/06/06 16:29:59 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t i;
-	char *p;
+	char *str;
 
-	p = (char *)s;
-	if (!n)
-		return ;
-	while (i < n)
-	{
-		(p + i++) = c;
-	}
+	str = (char *)s;
+	while (*str != c)
+		{
+			if (str == '\0')
+			{
+				return (NULL);
+			}
+			str++;
+		}
+	return (str);
 }
