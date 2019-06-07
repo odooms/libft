@@ -6,11 +6,11 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 07:48:03 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/05 09:25:58 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/05 13:46:14 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

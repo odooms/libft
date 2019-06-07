@@ -6,18 +6,33 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:02:12 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/06 15:06:22 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/07 13:51:00 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while ((*s1 == *s2) && (*s1 != '\0'))
+	unsigned char	*n_s1;
+	unsigned char	*n_s2;
+	size_t	i;
+
+	i = 0;
+	n_s1 = (unsigned char*)s1;
+	n_s2 = (unsigned char*)s2;
+	if (n_s1[i] != '\0' && n_s2[i] == '\0')
 	{
-		s1++;
-		s2++;
+		return (1);
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	else if (n_s1[i] == '\0' && n_s2[i] != '\0')
+	{
+		return (-1);
+	}
+	while ((n_s1[i] != '\0' && n_s2[i] != '\0') && (n_s1[i] == n_s2[i]) && (i < n))
+		i++;
+	{
+		return (n_s1[i] - n_s2[i]);
+	}
+	return (0);
 }

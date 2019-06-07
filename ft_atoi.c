@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 11:11:56 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/07 13:17:13 by odooms           ###   ########.fr       */
+/*   Created: 2019/06/07 15:09:20 by odooms            #+#    #+#             */
+/*   Updated: 2019/06/07 16:06:39 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_atoi(const char *str)
 {
-	unsigned char	*new_dst;
-	unsigned char	*new_src;
-	size_t	i;
+	int a;
+	int b;
+	int c;
 
-	new_dst = (unsigned char *)dst;
-	new_src = (unsigned char *)src;
-	i = 0;
-	while (i < len)
+	a = 0;
+	c = 1;
+	b = 0;
+	while (str[a] != '\0' && (str[a] == ' ' || str[a] == '\n' ||
+				str[a] == '\t' || str[a] == '\v' || str[a] == '\f' ||
+				str[a] == '\r'))
 	{
-		new_dst[i] = new_src[i];
-		i++;
+		a++;
 	}
-	return (dst);
-
+	if (str[a] == '-')
+	{
+		c = -1;
+	}
+	if (str[a] == '-' || str[a] == '+')
+		a++;
+	while (str[a] != '\0' && str[a] >= '0' && str[a] <= '9')
+	{
+		b = b * 10 + (str[a] - '0');
+		a++;
+	}
+	return (b * c);
 }

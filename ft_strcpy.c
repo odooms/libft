@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:48:52 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/05 09:04:20 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/07 15:09:58 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	int i;
-	char *a;
+	unsigned	i;
+	char	*a;
 
 	a = dst;
 	i = 0;
 	while (src[i] != '\0')
-		i++;
 	{
 		(dst[i] = src[i]);
+		i++;
 	}
 	dst[i] = '\0';
-	return (0);
+	return (dst);
 }
