@@ -6,13 +6,13 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 15:17:43 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/15 15:21:27 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/16 14:56:47 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(char *s, char c)
+static	int	ft_count(const char *s, char c)
 {
 	int i;
 	int t;
@@ -29,8 +29,7 @@ int	ft_count(char *s, char c)
 	}
 	return (t);
 }
-
-int	ft_countlen(char *s, int start, char c)
+static int	ft_countlen(const char *s, int start, char c)
 {
 	int i;
 
@@ -44,26 +43,24 @@ int	ft_countlen(char *s, int start, char c)
 }
 char	**ft_strsplit(const char *s, char c)
 {
-	char **s1;
-	int i;
-	int t;
-	int e;
+	char	**s1;
+	int		i;
+	int		t;
+	int		e;
 
 	i = ft_count(s, c);
 	s1 = (char **)malloc(sizeof(char *) * i + 1);
 	t = 0;
 	e = 0;
-
 	while (t < i)
 	{
 		while (s[e] == c && s[e] != '\0')
 			e++;
 		s1[t] = ft_strsub(s, e, ft_countlen(s, e, c));
-		while (s1[e] != c && s1[e] != '\0')
+		while (s[e] == c && s[e] != '\0')
 			e++;
 		t++;
 	}
 	s1[t] = NULL;
 	return (s1);
 }
-
