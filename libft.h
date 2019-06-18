@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:22:16 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/15 10:48:22 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/18 09:41:10 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	ft_isalpha(int c);
 int	ft_isascii(int c);
 int	ft_isdigit(int c);
 int	ft_isprint(int c);
+char	*ft_itoa(int a);
 void	*ft_memalloc(size_t len);
 void	ft_memdel(void **ap);
 void	*ft_memccp(void *dest, const void *src, int c, size_t n);

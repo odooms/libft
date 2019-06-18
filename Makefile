@@ -6,7 +6,7 @@
 #    By: odooms <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 11:49:17 by odooms            #+#    #+#              #
-#    Updated: 2019/06/15 13:17:27 by odooms           ###   ########.fr        #
+#    Updated: 2019/06/18 09:41:56 by odooms           ###   ########.fr        #
 #                                                                              #
 # ***************************************§************************************* #
 
@@ -66,6 +66,7 @@ SRC = ft_isalnum.c\
 	 ft_strsplit.c\
 	  ft_strrchr.c\
 	  ft_strtrim.c\
+	  ft_itoa.c\
 	 
 	
 HD = -I libft.h
@@ -123,6 +124,7 @@ OBJ = ft_isalnum.o\
 	  ft_strsplit.o\
 	  ft_strrchr.o\
 	  ft_strtrim.o\
+	  ft_itoa.o\
 
 all: $(NAME)
 

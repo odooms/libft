@@ -1,25 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/11 13:01:29 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/17 09:34:13 by odooms           ###   ########.fr       */
+/*   Created: 2019/06/17 12:47:50 by odooms            #+#    #+#             */
+/*   Updated: 2019/06/18 14:24:52 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+static	size_t	*ft_len(int n)
 {
-	if (s)
+	size_t	t;
+
+	t = 1;
+	while (n /= 10)
+		t++;
+	return (t);
+}
+
+char			*ft_itoa(int n)
+{
+	char			*s;
+	size_t			t;
+	unsigned int	i;
+
+	t = ft_len(n);
+	i = n;
+	if (n < 0)
 	{
-		while (*s)
-		{
-			*s = '\0';
-			s++;
-		}
+		i = -n;
+		t++;
 	}
+	s = ft_strnew(t);
+	if (!s)
+		return (NULL);
+	s[--t] = i % 10 + '0';
+	while (i /= 10)
+		s[--t] = i % 10 + '0';
+	if (n < 0)
+	{
+		s[0] = '-';
+	}
+	return (s);
 }
