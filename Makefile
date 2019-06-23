@@ -6,13 +6,13 @@
 #    By: odooms <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 11:49:17 by odooms            #+#    #+#              #
-#    Updated: 2019/06/18 09:41:56 by odooms           ###   ########.fr        #
+#    Updated: 2019/06/23 11:58:49 by odooms           ###   ########.fr        #
 #                                                                              #
 # ***************************************§************************************* #
 
 NAME = libft.a
 CC = gcc
-CFLAG = -Wall -Wextra -werror
+CFLAG = -Wall -Wextra -Werror
 MAIN = main.c
 SRC = ft_isalnum.c\
 	  ft_isalpha.c\

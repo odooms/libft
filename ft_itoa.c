@@ -6,13 +6,13 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 12:47:50 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/19 08:44:24 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/23 15:35:11 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	size_t	*ft_len(int n)
+static	size_t	ft_len(int n)
 {
 	size_t	t;
 

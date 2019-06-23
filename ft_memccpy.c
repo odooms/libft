@@ -6,13 +6,13 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 09:39:43 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/13 16:27:32 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/23 15:06:55 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char	*c1;
 	unsigned char	*c2;
@@ -20,15 +20,19 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char	t;
 
 	i = 0;
-	c1 = (unsigned char *)dest;
+	c1 = (unsigned char *)dst;
 	c2 = (unsigned char *)src;
 	t = (unsigned char)c;
 	while (i < n)
 	{
 		c1[i] = c2[i];
-		if (c1[i] == t)
-			return (c1 + i + 1);
+		while (c2[i] == t)
+		{
+			c1[i] = c2[i];
+			i++;
+			return (c1 + i);
+		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
