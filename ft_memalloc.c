@@ -6,21 +6,21 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 12:33:52 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/11 09:18:29 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/24 16:22:03 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t len)
+void	*ft_memalloc(size_t size)
 {
 	char	*t;
 	size_t	i;
 
-	if ((t = malloc(len)) == NULL)
+	if ((t = malloc(size)) == NULL)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	while (i < size)
 	{
 		t[i] = 0;
 		i++;

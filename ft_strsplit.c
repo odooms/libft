@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 15:17:43 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/18 09:25:46 by odooms           ###   ########.fr       */
+/*   Updated: 2019/06/24 16:49:14 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static	int		ft_countlen(const char *s, int start, char c)
 	return (i);
 }
 
-char			**ft_strsplit(const char *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**s1;
 	int		i;
