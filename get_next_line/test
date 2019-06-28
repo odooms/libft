@@ -1,0 +1,7 @@
+Another way to code faster is to use single-letter variable names everywhere. Like a, b or c.
+
+A short variable disappears in the code like a real ninja in the forest. No one will be able to find it using “search” of the editor. And even if someone does, they won’t be able to “decipher” what the name a or b means.
+
+…But there’s an exception. A real ninja will never use i as the counter in a "for" loop. Anywhere, but not here. Look around, there are many more exotic letters. For instance, x or y.
+
+An exotic variable as a loop counter is especially cool if the loop body takes 1-2 pages (make it longer if you can). Then if someone looks deep inside the loop, they won’t be able to quickly figure out that the variable named x is the loop counter
