@@ -6,16 +6,18 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/26 14:37:39 by odooms            #+#    #+#             */
-/*   Updated: 2019/07/02 16:40:47 by odooms           ###   ########.fr       */
+/*   Updated: 2019/07/03 13:39:33 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUFF_SIZE 16
+# define BUF_SIZE 32
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
+# include <sys/types.h>
 
 void	ft_putnbr(int n);
 int		get_next_line(const int fd, char **line);
