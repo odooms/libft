@@ -1,5 +1,4 @@
 The ten rules are
-
 Avoid complex flow constructs, such as goto and recursion.
 All loops must have fixed bounds. This prevents runaway code.
 Avoid heap memory allocation.
@@ -10,4 +9,3 @@ Check the return value of all non-void functions, or cast to void to indicate th
 Use the preprocessor sparingly.
 Limit pointer use to a single dereference, and do not use function pointers.
 Compile with all possible warnings active; all warnings should then be addressed before release of the software.
-

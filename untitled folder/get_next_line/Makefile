@@ -6,7 +6,7 @@
 #    By: odooms <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 11:49:17 by odooms            #+#    #+#              #
-#    Updated: 2019/07/04 11:57:06 by odooms           ###   ########.fr        #
+#    Updated: 2019/07/06 07:29:23 by odooms           ###   ########.fr        #
 #                                                                              #
 # ***************************************§************************************* #
 
@@ -24,6 +24,9 @@ SRC = ft_putchar.c\
 	  ft_bzero.c\
 	  ft_strsub.c\
 	  ft_strdup.c\
+	  ft_strcpy.c\
+	  ft_strdel.c\
+	  ft_strchr.c\
 	  
 HD = -I get_next_line.h
 
@@ -37,6 +40,9 @@ OBJ = ft_putchar.o\
 	  ft_bzero.o\
 	  ft_strsub.o\
 	  ft_strdup.o\
+	  ft_strcpy.o\
+	  ft_strdel.o\
+	  ft_strchr.o\
 
 all: $(NAME)
 

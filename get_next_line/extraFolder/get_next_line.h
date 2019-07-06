@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/26 14:37:39 by odooms            #+#    #+#             */
-/*   Updated: 2019/07/04 11:16:57 by odooms           ###   ########.fr       */
+/*   Updated: 2019/07/04 09:46:50 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define GET_NEXT_LINE_H
 
 # define BUF_SIZE 32
-# include "libft.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>

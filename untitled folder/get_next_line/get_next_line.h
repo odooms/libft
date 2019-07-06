@@ -6,14 +6,14 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/26 14:37:39 by odooms            #+#    #+#             */
-/*   Updated: 2019/07/04 11:16:57 by odooms           ###   ########.fr       */
+/*   Updated: 2019/07/06 05:19:52 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUF_SIZE 32
+# define BUFF_SIZE 32
 # include "libft.h"
 # include <unistd.h>
 # include <stdlib.h>
