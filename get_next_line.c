@@ -6,52 +6,55 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/26 14:55:01 by odooms            #+#    #+#             */
-/*   Updated: 2019/07/03 10:47:24 by odooms           ###   ########.fr       */
+/*   Updated: 2019/07/09 13:24:29 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <sys/types.h>
 #include "get_next_line.h"
-#include <stdio.h>
-#define BUF_SIZE 30
 
-char	*readline(char *str, int fd)
+static char	*readline(char *temp, int fd)
 {
-	char	buff[BUFF_SIZE + 1];
-	int		ret;
+	char			buff[BUFF_SIZE + 1];
+	int				ret;
+	char			*s;
 
-	while (ret)
+	while ((ret = read(fd, buff, BUFF_SIZE)) > 0)
 	{
-		ret = read(fd, buff, BUFF_SIZE);
-	   	buff[ret] = '\0';
-		str	= ft_strjoin(str, buff);
+		if (temp == NULL)
+			temp = ft_strnew(1);
+		buff[ret] = '\0';
+		s = temp;
+		temp = ft_strjoin(temp, buff);
+		if (ft_strchr(temp, '\n') != NULL)
+			break ;
 	}
-	return (str);
+	if (*s != 0)
+		free(s);
+	return (temp);
 }
 
-/*int	get_next_line(int const fd, char **line)
+int			get_next_line(int const fd, char **line)
 {
-	char	buff[BUFF_SIZE + 1];
-	int		ret;
-	char 	*temp;
-	char	str;
+	static char		*temp;
+	int				i;
+	char			*w;
 
-	if (fd <= 0 || line ==  NULL) 
+	if (fd < 0 || !line)
 		return (-1);
+	i = 0;
+	temp = readline(temp, fd);
 	if (fd > 0)
 	{
-		temp = *readline(&str, fd);
-		ft_putstr(temp);
-		return (1);
+		while (temp[i] != '\0' && temp[i] != '\n')
+		{
+			i++;
+		}
+		*line = ft_strsub(temp, 0, i);
+		w = ft_strdup(temp + i + 1);
+		free(temp);
+		temp = w;
+		if (ft_strlen(temp) > 0)
+			return (1);
 	}
-	return (0);
-}*/
-
-int main()
-{
-	char	c[30];
-	int fd = open("test2", O_RDONLY);
-	printf("%s", readline(c, fd));
 	return (0);
 }
