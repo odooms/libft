@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 10:22:02 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/15 13:57:19 by odooms           ###   ########.fr       */
+/*   Updated: 2019/07/26 13:22:01 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 
 	if (s == 0)
 		return (0);
-	t = (char*)malloc(sizeof(char ) * (len + 1));
+	t = (char*)malloc(sizeof(char ) * len + 1);
 	if (t == 0)
 		return (0);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: odooms <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 07:48:03 by odooms            #+#    #+#             */
-/*   Updated: 2019/06/11 08:47:25 by odooms           ###   ########.fr       */
+/*   Updated: 2019/07/26 13:22:31 by odooms           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	if (s1 == 0 || s2 == 0)
 		return (0);
-	ptr = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2 + 1)));
+	ptr = ((char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1)));
 	if (ptr == 0)
 		return (0);
 	while (*s1)
